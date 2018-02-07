@@ -139,6 +139,9 @@ setup(
             '.xpm = mfr.extensions.unoconv:UnoconvExporter',
         ],
         'mfr.renderers': [
+            '.htm = mfr.extensions.raw:RawRenderer',
+            '.html = mfr.extensions.raw:RawRenderer',
+
             # audio
             '.mp3 = mfr.extensions.audio:AudioRenderer',
             '.ogg = mfr.extensions.audio:AudioRenderer',
@@ -317,8 +320,6 @@ setup(
             '.hpp = mfr.extensions.codepygments:CodePygmentsRenderer',
             '.hrl = mfr.extensions.codepygments:CodePygmentsRenderer',
             '.hs = mfr.extensions.codepygments:CodePygmentsRenderer',
-            '.htm = mfr.extensions.codepygments:CodePygmentsRenderer',
-            '.html = mfr.extensions.codepygments:CodePygmentsRenderer',
             '.hx = mfr.extensions.codepygments:CodePygmentsRenderer',
             '.hxml = mfr.extensions.codepygments:CodePygmentsRenderer',
             '.hxsl = mfr.extensions.codepygments:CodePygmentsRenderer',
