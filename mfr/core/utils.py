@@ -33,7 +33,7 @@ def make_provider(name, request, url):
         )
 
 
-def make_exporter(name, source_file_path, output_file_path, format):
+def make_exporter(name, source_file_path, output_file_path, format, cache_id, source_id):
     """Returns an instance of :class:`mfr.core.extension.BaseExporter`
 
     :param str name: The name of the extension to instantiate. (.jpg, .docx, etc)
@@ -60,6 +60,8 @@ def make_exporter(name, source_file_path, output_file_path, format):
                 'source_file_path': source_file_path,
                 'output_file_path': output_file_path,
                 'format': format,
+                'cache_id': cache_id,
+                'source_id': source_id
             }
         )
 

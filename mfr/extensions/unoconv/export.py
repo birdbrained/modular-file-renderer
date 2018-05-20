@@ -41,6 +41,6 @@ class UnoconvExporter(extension.BaseExporter):
             )
 
         pdf = PdfReader()
-        pdf.ID[0] = self.cache_file_id
-        pdf.ID[1] = self.source_file_id
+        pdf.ID[0] = self.kwargs['cache_id']
+        pdf.ID[1] = self.kwargs['source_id']
         PdfWriter(self.output_file_path, trailer=pdf).write()

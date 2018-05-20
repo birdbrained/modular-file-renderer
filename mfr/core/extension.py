@@ -5,7 +5,7 @@ from mfr.core.metrics import MetricsRecord
 
 class BaseExporter(metaclass=abc.ABCMeta):
 
-    def __init__(self, ext, source_file_path, output_file_path, format):
+    def __init__(self, ext, source_file_path, output_file_path, format, **kwargs):
 
         """Initialize the base exporter.
 
@@ -14,7 +14,7 @@ class BaseExporter(metaclass=abc.ABCMeta):
         :param output_file_path: the path of the output file
         :param format: the format of the exported file (e.g. 1200*1200.jpg)
         """
-
+        self.kwargs = kwargs
         self.ext = ext
         self.source_file_path = source_file_path
         self.output_file_path = output_file_path

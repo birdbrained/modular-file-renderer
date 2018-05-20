@@ -80,7 +80,9 @@ class ExportHandler(core.BaseHandler):
             self.metadata.ext,
             self.source_file_path.full_path,
             self.output_file_path.full_path,
-            self.format
+            self.format,
+            self.cache_file_id,
+            self.cache_file_id
         )
 
         self.extension_metrics.add('class', exporter._get_module_name())
